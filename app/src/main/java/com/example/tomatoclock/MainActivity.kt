@@ -7,7 +7,7 @@ import java.sql.Time
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+    // random comment in master for br_check
     var time_counter: Int = 0
     var isRunning: Boolean = false
     var workTime: Int = 5
