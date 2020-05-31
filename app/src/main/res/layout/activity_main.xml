@@ -8,7 +8,9 @@
 
     <ImageView
         android:id="@+id/pic_tomato"
-        android:layout_width="600dp"
-        android:layout_height="500dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tomato" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
