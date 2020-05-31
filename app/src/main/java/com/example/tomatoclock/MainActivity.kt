@@ -21,11 +21,13 @@ class MainActivity : AppCompatActivity() {
             if (time_counter / 60 >= workTime) {
                 isWork = false
                 state_View.text = "Rest"
+                time_counter = 0
             }
         } else {
             if (time_counter / 60 >= restTime) {
                 isWork = true
                 state_View.text = "Work"
+                time_counter = 0
             }
         }
     }
