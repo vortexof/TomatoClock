@@ -8,22 +8,34 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     var time_counter: Int = 0
+    var isRunning : Boolean = false
+
     fun renewTime() {
         time_View.text = (time_counter / 60).toString() + ":" + (time_counter % 60).toString()
     }
-
-
     val timer = Timer("schedule", false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        timer.scheduleAtFixedRate(object : TimerTask() {
-            override fun run() {
-                time_counter++
-                this@MainActivity.runOnUiThread(Runnable { renewTime() })
+
+        start_btn.setOnClickListener {
+            if (isRunning) {
+                isRunning = false
+                timer.cancel()
+            } else {
+                isRunning = true
+                timer.scheduleAtFixedRate(object : TimerTask() {
+                    override fun run() {
+                        time_counter++
+                        this@MainActivity.runOnUiThread(Runnable { renewTime() })
+                    }
+                }, 1000, 1000)
             }
-        }, 1000, 1000)
+        }
+
+
+
     }
 
 
