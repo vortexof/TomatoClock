@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             time_View.text = "0:00"
             start_btn.text = "Start"
             state_View.text = "Pause"
+            isRunning = false
+            start_btn.text = "Start"
             workTime = workNum_inp.text.toString().toInt()
             restTime = restNum_inp.text.toString().toInt()
         }
