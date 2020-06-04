@@ -75,6 +75,16 @@ class MainActivity : AppCompatActivity() {
                 timer.cancel()
             } else {
                 isRunning = true
+                if (workTime != workNum_inp.text.toString().toInt()) {
+                    workTime = workNum_inp.text.toString().toInt()
+                    time_counter = 0
+                    time_View.text = "0:00"
+                }
+                if (restTime != restNum_inp.text.toString().toInt()) {
+                    restTime = restNum_inp.text.toString().toInt()
+                    time_counter = 0
+                    time_View.text = "0:00"
+                }
                 start_btn.text = "Pause"
                 state_View.text = "Work"
                 timer = StartTimer()
