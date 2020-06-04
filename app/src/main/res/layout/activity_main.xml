@@ -45,6 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pause"
+        android:textColor="#32DBC2"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +68,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="0:00"
+        android:textColor="#41DADA"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/state_View"
         app:layout_constraintStart_toStartOf="@+id/state_View"
         app:layout_constraintTop_toBottomOf="@+id/state_View" />
@@ -74,23 +78,27 @@
         android:id="@+id/workNum_inp"
         android:layout_width="95dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:inputType="number"
         android:text="5"
+        android:textAlignment="center"
+        android:textColor="#32DBC2"
         app:layout_constraintBottom_toTopOf="@+id/state_View"
-        app:layout_constraintEnd_toStartOf="@+id/state_View" />
+        app:layout_constraintEnd_toStartOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/restNum_inp"
         android:layout_width="94dp"
         android:layout_height="44dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         android:ems="10"
         android:inputType="number"
         android:text="5"
+        android:textAlignment="center"
+        android:textColor="#32DBC2"
         app:layout_constraintBottom_toTopOf="@+id/state_View"
-        app:layout_constraintStart_toEndOf="@+id/state_View" />
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/workTime_View"
@@ -99,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="WorkTime"
-        android:textColor="#FF9999"
+        android:textColor="#32DBC2"
         app:layout_constraintBottom_toTopOf="@+id/workNum_inp"
         app:layout_constraintEnd_toEndOf="@+id/workNum_inp"
         app:layout_constraintStart_toStartOf="@+id/workNum_inp" />
@@ -111,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="RestTime"
-        android:textColor="#FF9999"
+        android:textColor="#32DBC2"
         app:layout_constraintBottom_toTopOf="@+id/restNum_inp"
         app:layout_constraintEnd_toEndOf="@+id/restNum_inp"
         app:layout_constraintHorizontal_bias="0.393"
